@@ -21,6 +21,12 @@ def get_employees_by_age_range(age_lower_limit, age_upper_limit):
 def calculate_average_salary():
     total = 0
     average = 0
+    count = 0 
+    for i in employee_data:
+        total += i["salary"]
+        count += 1
+    average = total/count
+    return float(f"{average:.2f}")
 
     #add your implementation to calculate here
 
@@ -29,6 +35,9 @@ def calculate_average_salary():
 
 def get_employees_by_dept(department):
     result = []
+    for i in employee_data:
+        if i["department"] == department:
+            result.append(i)
 
     # Add your implementation from here
 
