@@ -14,3 +14,13 @@ def test_get_employees_age_range():
     
 def test_calculate_average_salary():
     assert EI.calculate_average_salary() == 60166.67
+    
+def test_get_employees_dep():
+    dept = "Marketing"
+     
+    emp = [
+    {"name": "Jane", "age": 25, "department": "Marketing", "salary": 60000},
+    {"name": "Mary", "age": 23, "department": "Marketing", "salary": 56000}
+    ]
+    assert EI.get_employees_by_dept(dept) == emp
+    
